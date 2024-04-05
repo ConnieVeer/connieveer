@@ -6,6 +6,8 @@ import { useTheme } from ".";
 import { Icon } from "../util/icon";
 import { tinaField } from "tinacms/dist/react";
 import { GlobalHeader } from "../../tina/__generated__/types";
+import { Logo } from "../util/logo";
+
 
 export const Header = ({ data }: { data: GlobalHeader }) => {
   const router = useRouter();
@@ -67,12 +69,14 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
     >
       <Container size="custom" className="py-0 relative z-10 max-w-8xl">
         <div className="flex items-center justify-between gap-6">
-          <h4 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
+          <h1 className="select-none text-lg font-bold tracking-tight my-4 transition duration-150 ease-out transform">
             <Link
               href="/"
-              className="flex gap-1 items-center whitespace-nowrap tracking-[.002em]"
+              className="flex gap-4 items-center whitespace-nowrap tracking-[.002em]"
             >
-              <Icon
+              <Logo data={{
+                  image: data.logo.image}} />
+              {/* <Icon
                 tinaField={tinaField(data, "icon")}
                 parentColor={data.color}
                 data={{
@@ -80,10 +84,10 @@ export const Header = ({ data }: { data: GlobalHeader }) => {
                   color: data.icon.color,
                   style: data.icon.style,
                 }}
-              />
+              /> */}
               <span data-tina-field={tinaField(data, "name")}>{data.name}</span>
             </Link>
-          </h4>
+          </h1>
           <ul className="flex gap-6 sm:gap-8 lg:gap-10 tracking-[.002em] -mx-4">
             {data.nav &&
               data.nav.map((item, i) => {

@@ -1,5 +1,6 @@
 import type { Collection } from "tinacms";
 import { iconSchema } from "../../components/util/icon";
+import { logoSchema } from "../../components/util/logo";
 import { ColorPickerInput } from "../fields/color";
 
 const Global: Collection = {
@@ -17,6 +18,12 @@ const Global: Collection = {
       name: "header",
       fields: [
         iconSchema as any,
+        logoSchema as any,
+        // {
+        //   type: "image",
+        //   label: "Logo",
+        //   name: "logo",
+        // },
         {
           type: "string",
           label: "Name",

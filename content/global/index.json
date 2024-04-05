@@ -5,7 +5,13 @@
       "color": "orange",
       "style": "float"
     },
-    "name": "Tina Starter",
+    "logo": {
+      "image": {
+        "src": "/uploads/LogoDHE@4x.png",
+        "alt": "logo-dhe"
+      }
+    },
+    "name": "Duurzaam Hasseler Es",
     "color": "default",
     "nav": [
       {
@@ -14,7 +20,7 @@
       },
       {
         "href": "about",
-        "label": "About"
+        "label": "Over ons"
       },
       {
         "href": "posts",
@@ -25,13 +31,13 @@
   "footer": {
     "color": "default",
     "social": {
-      "facebook": "/",
-      "twitter": "/",
-      "instagram": "/"
+      "facebook": "https://www.facebook.com/WgDzHasselerEs/",
+      "twitter": "https://twitter.com/DzHasselerEs/",
+      "instagram": "https://www.instagram.com/werkgroepduurzaamhasseleres/"
     }
   },
   "theme": {
-    "color": "blue",
+    "color": "green",
     "font": "sans",
     "darkMode": "system"
   }

@@ -4,7 +4,7 @@ import { Container } from "../util/container";
 import { Section } from "../util/section";
 import { useTheme } from "../layout";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
-import type { TinaTemplate } from "tinacms";
+import type { Template } from "tinacms";
 import { PageBlocksHero } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 
@@ -25,7 +25,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
     <Section color={data.color}>
       <Container
         size="large"
-        className="grid grid-cols-1 md:grid-cols-5 gap-14 items-center justify-center"
+        className={`grid grid-cols-1 md:grid-cols-5 gap-14 items-center justify-center ${data.reverse}`}
       >
         <div className="row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left">
           {data.tagline && (
@@ -93,7 +93,7 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
   );
 };
 
-export const heroBlockSchema: TinaTemplate = {
+export const heroBlockSchema: Template = {
   name: "hero",
   label: "Hero",
   ui: {
@@ -188,5 +188,11 @@ export const heroBlockSchema: TinaTemplate = {
         { label: "Primary", value: "primary" },
       ],
     },
+    {
+      type: "boolean",
+      label: "volgorde omdraaien",
+      name:"reverse"
+
+    }
   ],
 };

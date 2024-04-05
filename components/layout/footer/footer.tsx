@@ -44,6 +44,11 @@ export const Footer = ({ data, icon, rawData }) => {
 
   return (
     <footer className={`bg-gradient-to-br ${footerColorCss}`}>
+      <img alt=""
+        src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/3awPWmZ3SZeO0Dyni3CsKMtkZQS2YDzRb9JOKCgUnSvLB3urqhpfSqUCKsorH1Mw.jpg"
+        decoding="async" data-nimg="fill"
+        // style={{"position:absolutetop:0;left:0;bottom:0;right:0;box-sizing:border-box;padding:0;border:none;margin:auto;display:block;width:0;height:0;min-width:100%;max-width:100%;min-height:100%;max-height:100%;object-fit:contain;object-position:25% 0%"}}
+        className="w-full h-full" loading="lazy" />
       <Container className="relative" size="small">
         <div className="flex justify-between items-center gap-6 flex-wrap">
           <Link
@@ -68,11 +73,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaFacebookF
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
                     ]
-                  }`}
+                    }`}
                 />
               </a>
             )}
@@ -83,11 +87,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaTwitter
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
                     ]
-                  }`}
+                    }`}
                 />
               </a>
             )}
@@ -98,11 +101,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <AiFillInstagram
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
                     ]
-                  }`}
+                    }`}
                 />
               </a>
             )}
@@ -113,11 +115,10 @@ export const Footer = ({ data, icon, rawData }) => {
                 target="_blank"
               >
                 <FaGithub
-                  className={`${socialIconClasses} ${
-                    socialIconColorClasses[
-                      data.color === "primary" ? "primary" : theme.color
+                  className={`${socialIconClasses} ${socialIconColorClasses[
+                    data.color === "primary" ? "primary" : theme.color
                     ]
-                  }`}
+                    }`}
                 />
               </a>
             )}
@@ -125,9 +126,8 @@ export const Footer = ({ data, icon, rawData }) => {
           <RawRenderer parentColor={data.color} rawData={rawData} />
         </div>
         <div
-          className={`absolute h-1 bg-gradient-to-r from-transparent ${
-            data.color === "primary" ? `via-white` : `via-black dark:via-white`
-          } to-transparent top-0 left-4 right-4 opacity-5`}
+          className={`absolute h-1 bg-gradient-to-r from-transparent ${data.color === "primary" ? `via-white` : `via-black dark:via-white`
+            } to-transparent top-0 left-4 right-4 opacity-5`}
         ></div>
       </Container>
     </footer>
