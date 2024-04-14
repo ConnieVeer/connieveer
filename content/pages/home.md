@@ -18,7 +18,7 @@ blocks:
     image:
       src: '/uploads/photo-1527525443983-6e60c75fff46[1].jpg'
     color: default
-    reverse: false
+    reverse: true
     _template: hero
   - tagline: ''
     headline: Contact
@@ -39,34 +39,20 @@ blocks:
     color: primary
     reverse: false
     _template: hero
-  - headline: Welcome to the Tina Starter
-    text: >
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
-    actions:
-      - label: Contactformulier
-        type: button
-        icon: true
-        link: 'https://forms.gle/qhxNjE16XC2g72M56'
-      - label: Get Started
-        type: button
-        icon: true
-        link: /posts
-      - label: Read Blog
-        type: link
-        icon: false
-        link: /posts
-    image:
-      src: /uploads/unsplash-75EFpyXu3Wg.jpg
-      alt: >-
-        Photo of palm trees at sunset by Adam Birkett -
-        unsplash.com/photos/75EFpyXu3Wg
-    color: default
-    _template: hero
   - items:
+      - icon:
+          name: ''
+          color: ''
+          style: float
+        title: ''
+        text: ''
+        post: content/posts/25-april-informatieavond.mdx
+      - icon:
+          color: pink
+          style: float
+        title: ''
+        text: ''
+        post: content/posts/voteForPedro.mdx
       - icon:
           name: BiCodeBlock
           color: red
@@ -91,11 +77,15 @@ blocks:
           color, font, or icon set.
     color: tint
     _template: features
-  - quote: >-
-      There are only two hard things in Computer Science: cache invalidation and
-      naming things.
-    author: Phil Karlton
-    color: primary
-    _template: testimonial
+  - items:
+      - naam: Natuur en Milieu Overijssel
+        image:
+          src: /uploads/NMO-logo-272x64-1.png
+          alt: NMO
+      - naam: Energie van Hengelo
+        image:
+          src: /uploads/logo-energie-van-hengelo.svg
+          alt: EvH
+    _template: partners
 ---
 

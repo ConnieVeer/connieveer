@@ -21,6 +21,7 @@ import { Prism } from "tinacms/dist/rich-text/prism";
 import type { TinaMarkdownContent, Components } from "tinacms/dist/rich-text";
 import { PostType } from "../../pages/posts/[filename]";
 import { tinaField } from "tinacms/dist/react";
+import Link from "next/link";
 
 const components: Components<{
   BlockQuote: {
@@ -36,6 +37,10 @@ const components: Components<{
     children: TinaMarkdownContent;
     disclaimer?: TinaMarkdownContent;
   };
+  Button: {
+    buttonLink: string;
+    buttonText: string;
+  }
 }> = {
   code_block: (props) => <Prism {...props} />,
   BlockQuote: (props: {
@@ -110,6 +115,20 @@ const components: Components<{
       <img src={props.url} alt={props.alt} />
     </span>
   ),
+  Button: (props) => {
+    return (
+      <div className="items-center">
+        <Link href={props.buttonLink || ""}>
+          <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+            <button
+              className="flex items-center justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-green-500 hover:bg-green-600 bg-gradient-to-r from-green-400 to-green-600 hover:from-green-400 hover:to-green-500">
+              {props.buttonText}
+            </button>
+          </div>
+        </Link>
+      </div>
+    )
+  }
 };
 
 export const Post = (props: PostType) => {
@@ -142,9 +161,8 @@ export const Post = (props: PostType) => {
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
         >
           <span
-            className={`bg-clip-text text-transparent bg-gradient-to-r ${
-              titleColorClasses[theme.color]
-            }`}
+            className={`bg-clip-text text-transparent bg-gradient-to-r ${titleColorClasses[theme.color]
+              }`}
           >
             {props.title}
           </span>
@@ -174,12 +192,12 @@ export const Post = (props: PostType) => {
               </span>
             </>
           )}
-          <p
+          {/* <p
             data-tina-field={tinaField(props, "date")}
             className="text-base text-gray-400 group-hover:text-gray-500 dark:text-gray-300 dark:group-hover:text-gray-150"
           >
             {formattedDate}
-          </p>
+          </p> */}
         </div>
       </Container>
       {props.heroImg && (

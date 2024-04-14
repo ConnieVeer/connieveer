@@ -7,6 +7,7 @@ export const Section = ({ children, color = "", className = "" ,...props}) => {
     default:
       "text-gray-800 dark:text-gray-50 bg-gradient-to-tl from-gray-50 dark:from-gray-900 via-transparent to-transparent",
     tint: "text-gray-900 dark:text-gray-100 bg-gradient-to-br from-gray-100 dark:from-gray-1000 to-transparent",
+    lichtgroen: "text-gray-900 dark:text-gray-100 bg-lime-200	dark:bg-lime-700",
     green:
         "text-white bg-green-600 bg-gradient-to-br from-green-600 to-green-700",
     primary: {
@@ -33,7 +34,7 @@ export const Section = ({ children, color = "", className = "" ,...props}) => {
 
   return (
     <section
-      className={`flex-1 relative transition duration-150 ease-out body-font overflow-hidden bg-${color} ${sectionColorCss} ${className}`}
+      className={`flex-1 relative transition duration-150 ease-out body-font overflow-hidden  ${sectionColorCss} ${className}`}
    {...props}
     > 
       {children}

@@ -78,6 +78,22 @@ const Post: Collection = {
           ],
         },
         {
+          name: "Button",
+          label: "Button",
+          fields: [
+            {
+              name: "buttonLink",
+              label: "link",
+              type: "string",
+            },
+            {
+              name: "buttonText",
+              label: "label",
+              type: "string",
+            },
+          ],
+        },
+        {
           name: "NewsletterSignup",
           label: "Newsletter Sign Up",
           fields: [

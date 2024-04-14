@@ -25,9 +25,9 @@ export const Hero = ({ data }: { data: PageBlocksHero }) => {
     <Section color={data.color}>
       <Container
         size="large"
-        className={`grid grid-cols-1 md:grid-cols-5 gap-14 items-center justify-center ${data.reverse}`}
+        className={`grid grid-cols-1 md:grid-cols-5 gap-14 items-center justify-center`}
       >
-        <div className="row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left">
+        <div className={`row-start-2 md:row-start-1 md:col-span-3 text-center md:text-left ${data.reverse && "md:order-2 " }`}>
           {data.tagline && (
             <h2
               data-tina-field={tinaField(data, "tagline")}
@@ -186,6 +186,7 @@ export const heroBlockSchema: Template = {
         { label: "Default", value: "default" },
         { label: "Tint", value: "tint" },
         { label: "Primary", value: "primary" },
+        {label: "Licht groen", value: "lichtgroen"}
       ],
     },
     {

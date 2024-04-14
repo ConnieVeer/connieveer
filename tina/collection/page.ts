@@ -4,6 +4,7 @@ import { contentBlockSchema } from "../../components/blocks/content";
 import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
 import { bannerBlockSchema } from "../../components/blocks/banner";
+import { partnersBlockSchema} from "../../components/blocks/partners";
 
 const Page: Collection = {
   label: "Pages",
@@ -44,6 +45,9 @@ const Page: Collection = {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         featureBlockSchema,
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        partnersBlockSchema,
         contentBlockSchema,
         testimonialBlockSchema,
       ],

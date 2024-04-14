@@ -7,6 +7,9 @@ import {
   PageBlocksFeaturesItems,
 } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 export const Feature = ({
   featuresColor,
@@ -28,6 +31,12 @@ export const Feature = ({
           data={{ size: "large", ...data.icon }}
         />
       )}
+      {data.post && data.post.heroImg && (
+        <img
+          data-tina-field={tinaField(data, "post")}
+          src={data.post.heroImg}
+        />
+      )}
       {data.title && (
         <h3
           data-tina-field={tinaField(data, "title")}
@@ -36,14 +45,39 @@ export const Feature = ({
           {data.title}
         </h3>
       )}
-      {data.text && (
-        <p
-          data-tina-field={tinaField(data, "text")}
-          className="text-base opacity-80 leading-relaxed"
+      {data.post && (
+        <h3
+          data-tina-field={tinaField(data, "post")}
+          className="text-2xl font-semibold title-font"
         >
-          {data.text}
-        </p>
+          {data.post.title}
+        </h3>
       )}
+      {data.text ? (<p
+        data-tina-field={tinaField(data, "post")}
+        className="text-base opacity-80 leading-relaxed"
+      >
+        {data.text}
+      </p>
+      ) :
+        (data.post && data.post.excerpt &&
+          <div
+            data-tina-field={tinaField(data, "post")}
+            className="text-base opacity-80 leading-relaxed"
+          >
+            <TinaMarkdown content={data.post.excerpt} />
+          </div>
+        )
+      }
+      {data.post && <Link
+        key={data.post._sys.filename}
+        href={`/posts/` + data.post._sys.filename}
+        className=""
+      >
+        <span className="inline-block  transition-all duration-300 ease-out">
+          <BsArrowRight className="inline-block h-8 -mt-1 ml-1 w-auto opacity-70" />
+        </span>
+      </Link>}
     </div>
   );
 };
@@ -113,6 +147,12 @@ export const featureBlockSchema = {
           ui: {
             component: "textarea",
           },
+        },
+        {
+          type: "reference",
+          label: "Post",
+          name: "post",
+          collections: ["post"],
         },
       ],
     },
