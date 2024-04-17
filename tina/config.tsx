@@ -6,12 +6,12 @@ import Author from "./collection/author";
 import Page from "./collection/page";
 
 const config = defineConfig({
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID!,
-  branch:
-    process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
-    process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
-    process.env.HEAD!, // Netlify branch env
-  token: process.env.TINA_TOKEN!,
+  clientId: "3bd03e4f-0edb-43a9-b6a9-17b33e8de106",
+  branch: "main",
+    // process.env.NEXT_PUBLIC_TINA_BRANCH! || // custom branch env override
+    // process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF! || // Vercel branch env
+    // process.env.HEAD!, // Netlify branch env
+  token: "2824de8cb9c62033b0be96509be8a29aff44a9f8",
   media: {
     // If you wanted cloudinary do this
     // loadCustomStore: async () => {
