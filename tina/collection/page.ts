@@ -45,7 +45,7 @@ const Page: Collection = {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         featureBlockSchema,
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         partnersBlockSchema,
         contentBlockSchema,
