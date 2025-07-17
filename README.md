@@ -1,82 +1,29 @@
-# Tina Starter 🦙
+Voor een transportbedrijf heb ik gewerkt aan een dashboard waarmee we temperatuurdata uit trailers konden koppelen aan ritinformatie uit het planningssysteem Navitrans. Het doel was om inzicht te geven in de condities tijdens een rit — met name of de lading gedurende de rit binnen de juiste temperatuurgrenzen is gebleven. Dit was zowel intern belangrijk als richting de klant, als bewijs van correcte koelketenbewaking.
 
-![tina-cloud-starter-demo](https://user-images.githubusercontent.com/103008/130587027-995ccc45-a852-4f90-b658-13e8e0517339.gif)
+De temperatuurdata kwam van TrailerConnect, het telematica-platform van Schmitz Cargobull. In hun online omgeving heb ik een push service geconfigureerd die real-time data stuurt op basis van events zoals deur open, start rit, stop rit, enz. Deze data werd opgeslagen in een MongoDB, vanwege de snelheid en flexibiliteit van schema’s (de eventstructuur kon namelijk per type trailer verschillen).
 
-This Next.js starter is powered by [TinaCMS](https://app.tina.io) for you and your team to visually live edit the structured content of your website. ✨
+Om de data bruikbaar te maken voor rapportages en dashboards, liet ik via een Laravel Scheduler elke 15 minuten de relevante gegevens overzetten naar een lokale SQL-database. Daar konden ze eenvoudiger gekoppeld worden aan de ritdata uit Navitrans (zoals rit-ID, klant, chauffeur en laad-/losinformatie).
 
-The content is managed through Markdown and JSON files stored in your GitHub repository, and queried through Tina GraphQL API.
+In de API heb ik vervolgens de gecombineerde data (temperatuur, events en ritdetails) samengebracht, getransformeerd en geaggregeerd. Deze bewerkte data werd vervolgens via het dashboard gepresenteerd. Op het dashboard zelf vonden nog aanvullende bewerkingen plaats voor de visualisaties, bijvoorbeeld het plotten van temperatuurverloop over tijd of het markeren van afwijkende events.
 
-### Features
+Het geheel was ontworpen om schaalbaar en uitbreidbaar te zijn — met ruimte om de data-pijplijn later eventueel te vervangen door een meer gespecialiseerde ETL-omgeving indien nodig.
 
-- [Tina Headless CMS](https://app.tina.io) for authentication, content modeling, visual editing and team management.
-- [Vercel](https://vercel.com) deployment to visually edit your site from the `/admin` route.
-- Local development workflow from the filesystem with a local GraqhQL server.
+```mermaid
+flowchart TD
+    A["TrailerConnect (Schmitz Cargobull)"] -->|Push events| B["MongoDB (event data)"]
+    B -->|Elke 15 min via Laravel Scheduler| C["SQL Database (gestructureerde data)"]
+    D["Navitrans Database (ritdata)"] --> E["API (Laravel)"]
+    C --> E
+    E -->|Gecombineerde, getransformeerde en geaggregeerde data| F["Dashboard"]
+    F --> G["Visualisaties (grafieken, temperatuurverloop, events)"]
 
-## Requirements
-
-- Git, [Node.js Active LTS](https://nodejs.org/en/about/releases/), Yarn installed for local development.
-- A [TinaCMS](https://app.tina.io) account for live editing.
-
-## Local Development
-
-Install the project's dependencies:
-
-```
-yarn install
-```
-
-Run the project locally:
+    style A fill:#f9f,stroke:#333,stroke-width:1px
+    style B fill:#bbf,stroke:#333,stroke-width:1px
+    style C fill:#ccf,stroke:#333,stroke-width:1px
+    style D fill:#bfb,stroke:#333,stroke-width:1px
+    style E fill:#ffd,stroke:#333,stroke-width:1px
+    style F fill:#fcf,stroke:#333,stroke-width:1px
+    style G fill:#eee,stroke:#333,stroke-width:1px
 
 ```
-yarn dev
-```
 
-### Local URLs
-
-- http://localhost:3000 : browse the website
-- http://localhost:3000/admin : connect to Tina Cloud and go in edit mode
-- http://localhost:3000/exit-admin : log out of Tina Cloud
-- http://localhost:4001/altair/ : GraphQL playground to test queries and browse the API documentation
-
-### Building the Starter Locally (Using the hosted content API)
-
-Replace the `.env.example`, with `.env`
-
-```
-NEXT_PUBLIC_TINA_CLIENT_ID=<get this from the project you create at app.tina.io>
-TINA_TOKEN=<get this from the project you create at app.tina.io>
-NEXT_PUBLIC_TINA_BRANCH=<Specify the branch with Tina configured>
-```
-
-Build the project:
-
-```bash
-yarn build
-```
-
-## Getting Help
-
-To get help with any TinaCMS challenges you may have:
-
-- Visit the [documentation](https://tina.io/docs/) to learn about Tina.
-- [Join our Discord](https://discord.gg/zumN63Ybpf) to share feedback.
-- Visit the [community forum](https://community.tinacms.org/) to ask questions.
-- Get support through the chat widget on the TinaCMS Dashboard
-- [Email us](mailto:support@tina.io) to schedule a call with our team and share more about your context and what you're trying to achieve.
-- [Search or open an issue](https://github.com/tinacms/tinacms/issues) if something is not working.
-- Reach out on Twitter at [@tina_cms](https://twitter.com/tina_cms).
-
-## Development tips
-
-### Visual Studio Code GraphQL extension
-
-[Install the GraphQL extension](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql) to benefit from type auto-completion.
-
-### Typescript
-
-A good way to ensure your components match the shape of your data is to leverage the auto-generated TypeScript types.
-These are rebuilt when your `tina` config changes.
-
-## LICENSE
-
-Licensed under the [Apache 2.0 license](./LICENSE).
