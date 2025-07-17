@@ -27,3 +27,5 @@ flowchart TD
 
 ```
 
+public/uploads/Logistic_dashboard_1.png
+public/uploads/Logistic_dashboard_2.png
