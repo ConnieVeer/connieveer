@@ -17,11 +17,14 @@ pandas – datatransformatie en filtering
 sqlalchemy of psycopg2 – DB-connectie (optioneel)
 Logging & CLI-interface
 ## 📐 Architectuur
+```mermaid
 graph TD
     A[Mailbox-export (XML)] --> B[Parse XML met Python]
     B --> C[Schoon & structureer met Pandas]
     C --> D[Valideer & dedupliceer]
     D --> E[Exporteer CSV en laad in Hoom DB]
+
+```
 ## 🗂️ Bestandsoverzicht
 energiecoach-pipeline/
 ├── src/
