@@ -22,10 +22,10 @@ Fullstack developer met focus op datavisualisatie en dataverwerking. Ontworpen e
 
 ## 🧠 Dataverwerking
 
-- **Bron**: REST API (GreenByte)
-- **Data**: Parknaam, vermogen, windsnelheid/-richting, status turbine
+- **Bron**: REST API's (GreenByte, APX, locale DB)
+- **Data**: Parknaam, vermogen, windsnelheid/-richting, status turbine, Spot prijsontwikkeling
 - **Verwerking**: polling en caching per interval, transformatie per park
-- **Visualisatie**: via D3.js in custom React-componenten
+- **Visualisatie**: via D3.js in custom React-componenten, GeoJSON voor de kaart en locatie gegevens
 
 ---
 
@@ -40,8 +40,8 @@ Fullstack developer met focus op datavisualisatie en dataverwerking. Ontworpen e
 ## ⚙️ Stack
 
 - **Frontend**: React, D3.js
-- **Backend**: REST API integratie (Breeze)
-- **Visualisatie**: Custom SVG, D3, CSS-animaties
+- **Backend**: REST API integratie
+- **Visualisatie**: Custom SVG, D3, CSS-animaties, GeoJSON, MapBox
 
 ---
 
