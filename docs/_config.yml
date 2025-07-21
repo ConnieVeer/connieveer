@@ -10,8 +10,8 @@ title: Mijn Portfolio
 # show_downloads: false
 
 # Navigatie
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "page"
+# defaults:
+#   - scope:
+#       path: ""
+#     values:
+#       layout: "page"
