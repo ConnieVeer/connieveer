@@ -1,22 +1,20 @@
-# 📬 Energiecoach-aanvragen Extract & Load Pipeline
+#  Extract & Load Pipeline voor mailbox van Energie-coaches
 
 ## 🔧 Doel
 Het extraheren van energiecoach-aanvragen uit een mailbox om deze over te zetten naar de Hoom-database van Energie van Hengelo.
 
 ## 📁 Overzicht
-Dit project bevat een eenvoudige, herbruikbare ETL-pipeline in Python die:
+Dit project bevat een eenvoudige, ETL-pipeline in Python die:
 
-Een mailbox-export in XML-formaat verwerkt
-Belangrijke aanvraaggegevens (zoals naam, adres, motivatie) structureert
+Een mailbox-export in CSV-formaat verwerkt
+Belangrijke aanvraaggegevens (zoals naam, adres, bericht) extraheert en strucureerd
 Foutieve of dubbele inzendingen filtert
-De geschoonde data klaarmaakt voor bulkimport in de Hoom-database
+De geschoonde data klaarmaakt voor bulkimport in de Hoom-database. Dit kan ook in 1 keer, maar de verbindings gegevens voor de Hoom database waren nog niet bekend op het moment van verwerking. Daarom worden de gegevens eerst opgelslagen in een CSV bestand.
 
 ## ⚙️ Technologieën
 Python 3.9+
-xml.etree.ElementTree – XML-parsing
-pandas – datatransformatie en filtering
-sqlalchemy of psycopg2 – DB-connectie (optioneel)
-Logging & CLI-interface
+Pandas – inlezen, opschonen, transformeren en analyseren van de mail data
+SQLAlchemy - importeren van de csv gegevens in de Hoom database
 ## 📐 Architectuur
 <pre class="mermaid">
 flowchart TD
@@ -25,7 +23,7 @@ flowchart TD
     C --> D[Opschonen van ruwe data]
     D --> E[Filteren op relevante aanvragen]
     E --> F[Wegschrijven naar CSV-bestand]
-    F --> G["Importeren in Hoom-database (Later)"]
+    F --> G["Importeren gegevens in Hoom-database (Later)"]
   
 
     style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
@@ -64,12 +62,12 @@ python src/main.py --input data/mailbox_export.xml --output output/energiecoach.
 
 
 ## 🚩 Lessons Learned
-Inbox-structuur in XML verschilt per exporttype → flexibel parsen nodig
+Inbox-structuur in CSV is niet echt consistent → flexibel parsen nodig
 Inconsistentie in gebruikersinvoer vroeg om robuuste validatie
 Hoom-database structuur vereist veldmapping en normalisatie
-##📌 Status
+<!-- ##📌 Status
 ✅ Proof-of-concept geïmplementeerd en gebruikt voor meer dan 100 aanvragen
-🛠️ Klaar om uit te breiden naar webhook- of formulierautomatisering
+🛠️ Klaar om uit te breiden naar webhook- of formulierautomatisering -->
 <script type="module">
 	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 	mermaid.initialize({
