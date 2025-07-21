@@ -1,6 +1,7 @@
+---
 layout: default
 title: Over mij
-nav_order: 2
+permalink: /about/
 ---
 
 ## Over mij
