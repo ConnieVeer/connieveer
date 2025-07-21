@@ -57,11 +57,12 @@ python src/main.py --input data/mailbox_export.xml --output output/energiecoach.
 (Optioneel) Laad het CSV-bestand in Hoom via SQL  -->
 ## 💡 Voorbeeldoutput
 
+| Naam    | Adres |  Postcode  | Plaats | Emailadres | Datum ontvangen| Bericht|
+| -------- | ------- |-------- | ------- |-------- | ------- |-------- |
+| Jan Jansen  | Leliestraat 12  | 7551ST | Hengelo| jan@email.nl| 2023-10-11| IK wil graag een energiecoach|
+| A. de Vries | Deurningerstraat 4    | 7555PF | Hengelo| aisha@outlook.com| 20123-10-11| informatie over zonnepanelen|
 
 
-Naam	Adres	E-mail	Aanmeldingsdatum	Bericht
-Jan Jansen	Leliestraat 12	jan@email.nl	2023-11-10	IK wil graag een energiecoach
-Aisha de Vries	Deurningerstraat 4	aisha@outlook.com	2023-11-10	Ik heb een vraag voor een energiecoach
 ## 🚩 Lessons Learned
 Inbox-structuur in XML verschilt per exporttype → flexibel parsen nodig
 Inconsistentie in gebruikersinvoer vroeg om robuuste validatie
