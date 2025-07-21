@@ -3,7 +3,17 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: #2b2b2b;
+  /* background-color: #2b2b2b; */
+  background-image: url('../assets/images/splash.jpeg');
+
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   
 }
 
@@ -34,14 +44,4 @@ nav a:hover {
 main {
   padding: 2rem;
   color:white;
-  background-image: url('../assets/images/splash.jpeg');
-
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
