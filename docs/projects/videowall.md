@@ -33,7 +33,7 @@ Fullstack developer met focus op datavisualisatie en dataverwerking. Ontworpen e
 
 | Windroos                                  | Gauge Meter                                 |
 |------------------------------------------|---------------------------------------------|
-| ![Windroos](../assets/images/unsplash-lylCw4zcA7I.jpg) | ![Gauge](../assets/images/unsplash-lylCw4zcA7I.jpg)  |
+| ![Windroos](../assets/images/windroos.png) | ![Gauge](../assets/images/unsplash-lylCw4zcA7I.jpg)  |
 
 ---
 
