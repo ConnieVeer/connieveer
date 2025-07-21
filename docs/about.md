@@ -1,4 +1,4 @@
-layout: page
+layout: default
 title: Over mij
 nav_order: 2
 ---
