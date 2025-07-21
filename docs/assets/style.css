@@ -3,7 +3,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url("../assets/images/splash.jpeg");
+  background-image: url('../assets/images/splash.jpeg');
+  background-size: cover;
 }
 
 header {
