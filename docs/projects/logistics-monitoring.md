@@ -26,5 +26,5 @@ flowchart TD
     style G fill:#eee,stroke:#333,stroke-width:1px
 
 ```
-![Screenshots](public/uploads/Logistic_dashboard_1.png)
-![Screenshots](public/uploads/Logistic_dashboard_2.png)
+![Screenshots](../assets/images/Logistic_dashboard_1.png)
+![Screenshots](../assets/images/Logistic_dashboard_2.png)

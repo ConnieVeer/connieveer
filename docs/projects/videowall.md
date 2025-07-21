@@ -1,6 +1,6 @@
 # 🌬️ Realtime Videowall voor Windparken in Nederland
 
-![Dashboard Mockup](./assets/mockup-dashboard.png)
+![Dashboard Mockup](../assets/images/videowall-dashboard.png)
 
 ## 🎯 Doel
 Een dynamische visuele tool om live gegevens van windparken in Nederland te tonen op een videowall, met realtime productie-informatie en interactieve visualisaties.
@@ -33,7 +33,7 @@ Fullstack developer met focus op datavisualisatie en dataverwerking. Ontworpen e
 
 | Windroos                                  | Gauge Meter                                 |
 |------------------------------------------|---------------------------------------------|
-| ![Windroos](./assets/windrose-example.png) | ![Gauge](./assets/gauge-meter-example.png)  |
+| ![Windroos](../assets/images/windrose-example.png) | ![Gauge](../assets/images/gauge-meter-example.png)  |
 
 ---
 
