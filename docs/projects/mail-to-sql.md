@@ -25,8 +25,8 @@ flowchart TD
     C --> D[Opschonen van ruwe data]
     D --> E[Filteren op relevante aanvragen]
     E --> F[Wegschrijven naar CSV-bestand]
-    F --> G[Importeren in Hoom-database]
-    G -. Delay .-> H[Connectie met Hoom niet<br>direct beschikbaar (EVH)]
+    F --> G["Importeren in Hoom-database (Later)"]
+  
 
     style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
     style B fill:#f1f8e9,stroke:#8bc34a,stroke-width:2px

@@ -1,6 +1,6 @@
 # 🌬️ Realtime Videowall voor Windparken in Nederland
 
-![Dashboard Mockup](../assets/images/unsplash-lylCw4zcA7I.jpg)
+![Dashboard Mockup](../assets/images/videowall-PE.png)
 
 ## 🎯 Doel
 Een dynamische visuele tool om live gegevens van windparken in Nederland te tonen op een videowall, met realtime productie-informatie en interactieve visualisaties.
