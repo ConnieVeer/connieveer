@@ -8,7 +8,8 @@ In de API heb ik vervolgens de gecombineerde data (temperatuur, events en ritdet
 
 Het geheel was ontworpen om schaalbaar en uitbreidbaar te zijn — met ruimte om de data-pijplijn later eventueel te vervangen door een meer gespecialiseerde ETL-omgeving indien nodig.
 
-```mermaid
+<pre class="mermaid">
+
 flowchart TD
     A["TrailerConnect (Schmitz Cargobull)"] -->|Push events| B["MongoDB (event data)"]
     B -->|Elke 15 min via Laravel Scheduler| C["SQL Database (gestructureerde data)"]
@@ -25,6 +26,13 @@ flowchart TD
     style F fill:#fcf,stroke:#333,stroke-width:1px
     style G fill:#eee,stroke:#333,stroke-width:1px
 
-```
+</pre>
+<script type="module">
+	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+	mermaid.initialize({
+		startOnLoad: true,
+		theme: 'dark'
+	});
+</script>
 ![Screenshots](../assets/images/Logistic_dashboard_1.png)
 ![Screenshots](../assets/images/Logistic_dashboard_2.png)
