@@ -8,4 +8,4 @@ nav_order: 1
 
 Ik ben Wieneke, een softwareontwikkelaar met passie voor slimme oplossingen.
 
-👉 Bekijk mijn [Projecten](./projecten) of lees meer [Over mij](./about).
+👉 Bekijk mijn [Projecten](./projects) of lees meer [Over mij](./about).
