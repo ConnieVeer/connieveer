@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-image: url('../assets/images/splash.jpeg');
-  background-size: cover;
+  background-color: #2b2b2b;
+  
 }
 
 header {
@@ -33,4 +33,7 @@ nav a:hover {
 
 main {
   padding: 2rem;
+  color:white;
+  background-image: url('../assets/images/splash.jpeg');
+  background-size: cover;
 }
