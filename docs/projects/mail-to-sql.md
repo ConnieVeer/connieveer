@@ -19,10 +19,10 @@ Logging & CLI-interface
 ## 📐 Architectuur
 ```mermaid
 graph TD
-    A[Mailbox-export (XML)] --> B[Parse XML met Python]
-    B --> C[Schoon & structureer met Pandas]
-    C --> D[Valideer & dedupliceer]
-    D --> E[Exporteer CSV en laad in Hoom DB]
+    A["Mailbox-export (XML)"] --> B["Parse XML met Python"]
+    B --> C["Opschonen & structureren met Pandas"]
+    C --> D["Valideer & dedupliceer"]
+    D --> E["Exporteer CSV en laad in Hoom DB"]
 
 ```
 ## 🗂️ Bestandsoverzicht
