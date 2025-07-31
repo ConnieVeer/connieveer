@@ -11,35 +11,24 @@ Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn vo
 GIS
 SQL
 Meta base
-##stappen
-CBS Data verzamelen
+## 📋 Stappenplan
+1. CBS Data verzamelen
+	- Zonnepanelen per buurt per jaar (2016–2022).
+	- Geometrieën van wijken en buurten 2025.
 
-Zonnepanelen per buurt per jaar (2016–2022).
+2.Data voorbereiden
+	- Filter zonnepanelen datasheets op Hengelo.
+	- CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
 
-Geometrieën van wijken en buurten 2025.
+3.QGIS
+	- Laad geometrie + CSV in QGIS.
+ 	- Joinen op buurtcode.
+	- Visualiseren met gegradueerde symbologie.
 
-Data voorbereiden
+4.Kaart maken
+	- Begin met 1 jaar (2022).
 
-Filter op Hengelo.
-
-CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
-
-QGIS
-
-Laad geometrie + CSV in QGIS.
-
-Joinen op buurtcode.
-
-Visualiseren met gegradueerde symbologie.
-
-Kaart maken
-
-Begin met 1 jaar.
-
-Exporteren als afbeelding met titel, legenda en schaalbalk.
-
-Verbetering
-
+Uitbreidingen
 Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 
 ## 📐 Architectuur
@@ -67,13 +56,10 @@ flowchart TD
     style H fill:#ffcdd2,stroke:#e53935,stroke-width:2px,stroke-dasharray: 5 5
 </pre>
 
-## 🚩 Lessons Learned
-Inbox-structuur in CSV is niet echt consistent → flexibel parsen nodig
-Inconsistentie in gebruikersinvoer vroeg om robuuste validatie
-Hoom-database structuur vereist veldmapping en normalisatie
-<!-- ##📌 Status
-✅ Proof-of-concept geïmplementeerd en gebruikt voor meer dan 100 aanvragen
-🛠️ Klaar om uit te breiden naar webhook- of formulierautomatisering -->
+##📌 Status
+✅ eerste koppeling met 1 jaar aan gegevens gemaakt en geplot in een kaart met een graduele vulling die een presentatie van de hoeveelheid zonnepanelen in kWh weergeeft
+🛠️ Klaar om uit te breiden met een atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
+🛠️ Publiceren op onze (statische) website indien mogelijk in een interactieve weergave.
 <script type="module">
 	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 	mermaid.initialize({
