@@ -16,16 +16,16 @@ Meta base
 	- Zonnepanelen per buurt per jaar (2016–2022).
 	- Geometrieën van wijken en buurten 2025.
 
-2.Data voorbereiden
+2. Data voorbereiden
 	- Filter zonnepanelen datasheets op Hengelo.
 	- CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
 
-3.QGIS
+3. QGIS
 	- Laad geometrie + CSV in QGIS.
  	- Joinen op buurtcode.
 	- Visualiseren met gegradueerde symbologie.
 
-4.Kaart maken
+4. Kaart maken
 	- Begin met 1 jaar (2022).
 
 Uitbreidingen
@@ -33,7 +33,6 @@ Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 
 ## 📐 Architectuur
 <pre class="mermaid">
-flowchart TD
 flowchart TD
     A[Download CBS Zonnepanelen Data 2016-2022(per buurt)] --> B[Filter op Gemeente Hengelo]
     B --> C[Opslaan als CSV per Jaar]
