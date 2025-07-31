@@ -8,9 +8,10 @@ Zonnestroom; vermogen zonnepanelen woningen, wijken en buurten, 2016-2022 , open
 Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn voor de kaart weergave
 
 ## ⚙️ Technologieën
-GIS
-SQL
-Meta base
+- GIS
+- SQL
+- Meta base
+  
 ## 📋 Stappenplan
 1. CBS Data verzamelen
     - Zonnepanelen per buurt per jaar (2016–2022).
