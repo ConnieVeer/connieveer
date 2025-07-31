@@ -11,6 +11,36 @@ Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn vo
 GIS
 SQL
 Meta base
+##stappen
+CBS Data verzamelen
+
+Zonnepanelen per buurt per jaar (2016–2022).
+
+Geometrieën van wijken en buurten 2025.
+
+Data voorbereiden
+
+Filter op Hengelo.
+
+CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
+
+QGIS
+
+Laad geometrie + CSV in QGIS.
+
+Joinen op buurtcode.
+
+Visualiseren met gegradueerde symbologie.
+
+Kaart maken
+
+Begin met 1 jaar.
+
+Exporteren als afbeelding met titel, legenda en schaalbalk.
+
+Verbetering
+
+Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 
 ## 📐 Architectuur
 <pre class="mermaid">
