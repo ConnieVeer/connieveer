@@ -59,9 +59,9 @@ flowchart TD
     style H fill:#ffcdd2,stroke:#e53935,stroke-width:2px,stroke-dasharray: 5 5
 </pre>
 
-![Zonnestroom staafdiagram](../assets/images/zonnestroom_per buurt_hasseleres.png)
+![Zonnestroom](../assets/images/zonnestroom_per buurt_hasseleres.png)
 
-![Zonnestroom kaart 2022]('../assets/images/zonnepanelen Hasseler Es 2022.png')
+![Zonnestroom2022]('../assets/images/zonnepanelen Hasseler Es 2022.png')
 
  ![Windroos](../assets/images/windroos.png)
 
