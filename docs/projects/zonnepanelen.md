@@ -60,9 +60,7 @@ flowchart TD
 </pre>
 
 ![Zonnestroom](..assets/images/zonnestroom_per_buurt_hasseleres.png)
-![Zonnestroom2022]('../assets/images/zonnepanelen Hasseler Es 2022.png')
-![Zonnestroom2022](../assets/images/zonnepanelen Hasseler Es 2022.png)
-[]('../assets/images/zonnepanelen)
+![Zonnestroom2022](../assets/images/zonnepanelen_Hasseler_Es_2022.png)
 ## 📌 Status
 ✅ eerste koppeling met 1 jaar aan gegevens gemaakt en geplot in een kaart met een graduele vulling die een presentatie van de hoeveelheid zonnepanelen in kWh weergeeft.
 🛠️ Klaar om uit te breiden met een atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
