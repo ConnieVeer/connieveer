@@ -34,8 +34,7 @@ Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 ## 📐 Architectuur
 <pre class="mermaid">
 flowchart TD
-    A[Download CBS Zonnepanelen Data 2016-2022(per buurt)] --> B[Filter op Gemeente Hengelo]
-    B --> C[Opslaan als CSV per Jaar]
+    A[Download CBS Zonnepanelen Data 2016-2022 van de gemeente Hengelo] --> C[Opslaan als CSV per Jaar]
 
     D[Download CBS Wijk- en Buurtgeometrieën 2025] --> E[Laad Shapefile/GeoPackage in QGIS]
     C --> F[Laad CSV in QGIS]
