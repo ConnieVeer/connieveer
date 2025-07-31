@@ -63,6 +63,8 @@ flowchart TD
 
 ![Zonnestroom kaart 2022]('../assets/images/zonnepanelen Hasseler Es 2022.png')
 
+ ![Windroos](../assets/images/windroos.png)
+
 
 ## 📌 Status
 ✅ eerste koppeling met 1 jaar aan gegevens gemaakt en geplot in een kaart met een graduele vulling die een presentatie van de hoeveelheid zonnepanelen in kWh weergeeft.
