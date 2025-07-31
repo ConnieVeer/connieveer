@@ -34,16 +34,24 @@ Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 ## 📐 Architectuur
 <pre class="mermaid">
 flowchart TD
-    A[CSV files zonnestroom ] --> B[Samenvoegen tot 1 CSV file]
-    B --> C[]
+flowchart TD
+    A[Download CBS Zonnepanelen Data 2016-2022(per buurt)] --> B[Filter op Gemeente Hengelo]
+    B --> C[Opslaan als CSV per Jaar]
 
-  A1[geometrie data] --> B1[inladen in QGIS]-->C1 [ filteren op buurten in onze wijk]
-  
-  B1 --> C[koppelen van zonnestroom csv en geometrien, koppelen op buurt code
-    C --> D[Opschonen van ruwe data]
-    D --> E[Filteren op relevante aanvragen]
-    E --> F[Wegschrijven naar CSV-bestand]
-    F --> G["Importeren gegevens in Hoom-database (Later)"]
+    D[Download CBS Wijk- en Buurtgeometrieën 2025] --> E[Laad Shapefile/GeoPackage in QGIS]
+    C --> F[Laad CSV in QGIS]
+
+    F --> G[Join CSV met Buurtgeometrie<br>op Buurtcode]
+    E --> G
+
+    G --> H[Visualiseer in QGIS<br>Gegradueerde symbologie]
+    H --> I[Kaart voor 1 Jaar]
+
+    I --> J[Exporteren als Afbeelding<br>met Titel & Legenda]
+
+    %% Verbetering naar meerdere jaren
+    I --> K[Uitbreiden naar Tijdserie<br>of Animatie per Jaar]
+    K --> L[Meerdere Kaarten of Atlas<br>per Jaar automatisch genereren]
   
 
     style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
