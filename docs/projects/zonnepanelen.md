@@ -13,20 +13,17 @@ SQL
 Meta base
 ## 📋 Stappenplan
 1. CBS Data verzamelen
-	- Zonnepanelen per buurt per jaar (2016–2022).
-	- Geometrieën van wijken en buurten 2025.
-
+    - Zonnepanelen per buurt per jaar (2016–2022).
+    - Geometrieën van wijken en buurten 2025.
 2. Data voorbereiden
-	- Filter zonnepanelen datasheets op Hengelo.
-	- CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
-
+    - Filter zonnepanelen datasheets op Hengelo.
+    - CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
 3. QGIS
-	- Laad geometrie + CSV in QGIS.
- 	- Joinen op buurtcode.
-	- Visualiseren met gegradueerde symbologie.
-
+    - Laad geometrie + CSV in QGIS.
+    - Joinen op buurtcode.
+    - Visualiseren met gegradueerde symbologie.
 4. Kaart maken
-	- Begin met 1 jaar (2022).
+    - Begin met 1 jaar (2022).
 
 Uitbreidingen
 Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
