@@ -60,7 +60,7 @@ flowchart TD
 </pre>
 
 ![Zonnestroom](../assets/images/zonnestroom_per buurt_hasseleres.png)
-
+![Zonnestroomx](..assets/images/zonnestroom_per_buurt_hasseleres.png)
 ![Zonnestroom2022]('../assets/images/zonnepanelen Hasseler Es 2022.png')
 
  ![Windroos](../assets/images/windroos.png)
