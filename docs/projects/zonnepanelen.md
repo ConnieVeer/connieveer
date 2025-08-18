@@ -70,7 +70,7 @@ flowchart TD
 ![Zonnestroom2022](../assets/images/zonnepanelen_Hasseler_Es_2022.png)
 
 ### Uitbreiding interactieve kaart met jaar selectie 
-De onderstaande kaarten zijn gemaakt met Leaflet binnen een React webapplicatie
+De onderstaande kaarten zijn gemaakt met Leaflet, ook is er een interactieve kaart![kaart](/solar.html) 
 ![Zonnestroom2016](../assets/images/zonnestroom_2016.png) 
 ![Zonnestroom2021](../assets/images/zonnestroom_2021.png) 
 
