@@ -9,15 +9,18 @@ Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn vo
 
 ## ⚙️ Technologieën
 - GIS
+- QGIS
 - SQL
 - Meta base
+- React
+- Leaflet
   
 ## 📋 Stappenplan
 1. CBS Data verzamelen
     - Zonnepanelen per buurt per jaar (2016–2022).
     - Geometrieën van wijken en buurten 2025.
 2. Data voorbereiden
-    - Filter zonnepanelen datasheets op Hengelo.
+    - Filter zonnepanelen datasheets op Hasseler Es.
     - CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
 3. QGIS
     - Laad geometrie + CSV in QGIS.
@@ -25,10 +28,13 @@ Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn vo
     - Visualiseren met gegradueerde symbologie.
 4. Kaart maken
     - Begin met 1 jaar (2022).
-
-Uitbreidingen
-Atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
-
+5. Uitbreiding meerdere jaren (2026-2022)
+   - virtuele laag maken met per buurt de totale zonnepanelen vermogen output voor alle jaren
+   - virtuele laag exporteren naar GeoJSON
+   - De GeoJSON data imporeren in een Leafet component met OpenStreetMap kaart
+   - Leaflet centreren op onze wijk met een goed zoom level
+   - select element voor de keuze per jaar  
+   
 ## 📐 Architectuur
 <pre class="mermaid">
 flowchart TD
@@ -62,9 +68,13 @@ flowchart TD
 
 ![Zonnestroom](../assets/images/zonnestroom_per%20buurt_hasseleres.png) 
 ![Zonnestroom2022](../assets/images/zonnepanelen_Hasseler_Es_2022.png)
+
+-Uitbreiding interactieve kaart met jaar selectie-
+
+
 ## 📌 Status
 ✅ eerste koppeling met 1 jaar aan gegevens gemaakt en geplot in een kaart met een graduele vulling die een presentatie van de hoeveelheid zonnepanelen in kWh weergeeft.
-🛠️ Klaar om uit te breiden met een atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
+✅ Klaar om uit te breiden met een atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 🛠️ Publiceren op onze (statische) website indien mogelijk in een interactieve weergave.
 
 <script type="module">
