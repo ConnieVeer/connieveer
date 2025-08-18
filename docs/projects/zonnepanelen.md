@@ -69,13 +69,15 @@ flowchart TD
 ![Zonnestroom](../assets/images/zonnestroom_per%20buurt_hasseleres.png) 
 ![Zonnestroom2022](../assets/images/zonnepanelen_Hasseler_Es_2022.png)
 
-### Uitbreiding interactieve kaart met jaar selectie
+### Uitbreiding interactieve kaart met jaar selectie 
+De onderstaande kaarten zijn gemaakt met Leaflet binnen een React webapplicatie
 ![Zonnestroom2016](../assets/images/zonnestroom_2016.png) 
 ![Zonnestroom2021](../assets/images/zonnestroom_2021.png) 
 
 
 ## 📌 Status
 ✅ eerste koppeling met 1 jaar aan gegevens gemaakt en geplot in een kaart met een graduele vulling die een presentatie van de hoeveelheid zonnepanelen in kWh weergeeft.
+
 ✅ Klaar om uit te breiden met een atlasfunctie of tijdserie/animatie voor meerdere jaren automatisch genereren.
 
 🛠️ Interactieve kaart op statische website publiceren (TinaCMS/MDX) met polygonen en dynamische jaarselectie.
