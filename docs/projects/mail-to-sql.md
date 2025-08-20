@@ -35,24 +35,7 @@ flowchart TD
     style G fill:#ede7f6,stroke:#673ab7,stroke-width:2px
     style H fill:#ffcdd2,stroke:#e53935,stroke-width:2px,stroke-dasharray: 5 5
 </pre>
-## 🗂️ Bestandsoverzicht
-<!-- energiecoach-pipeline/
-├── src/
-│   ├── parse_xml.py         # Extract en parse XML-bestanden
-│   ├── transform.py         # Structureren, opschonen, deduplicatie
-│   ├── load.py              # Database-laag of export naar CSV
-│   └── config.py            # Padinstellingen, mapping, log-niveau
-├── data/
-│   └── export_stations.xml  # Voorbeeldmailbox-export
-├── output/
-│   └── energiecoach.csv      # Gevalideerde, schone dataset
-├── README.md
-└── requirements.txt -->
-<!-- ##▶️ Gebruik
-Plaats je XML-export in de data/-map
-Run het script:
-python src/main.py --input data/mailbox_export.xml --output output/energiecoach.csv
-(Optioneel) Laad het CSV-bestand in Hoom via SQL  -->
+
 ## 💡 Voorbeeldoutput
 
 | Naam    | Adres |  Postcode  | Plaats | Emailadres | Datum ontvangen| Bericht|
