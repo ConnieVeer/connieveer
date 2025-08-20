@@ -2,23 +2,23 @@
 #  Overzicht van zonnepanelen in de wijk Hasseler Es
 
 ## 🔧 Doel
-Inzicht krijgen in de hoeveelhied zonnepanelen in de buurten van de Hasseler Es om dit onderling inzichteljk te krijgen
+Inzicht krijgen in de hoeveelhied zonnepanelen in de buurten van de Hasseler Es om dit onderling inzichtelijk te krijgen
 ## 📁 Overzicht
-Zonnestroom; vermogen zonnepanelen woningen, wijken en buurten, 2016-2022 , openbare dat bronnen van het CBS, gefilters op gemeente Hengelo
+Zonnestroom; vermogen zonnepanelen woningen, wijken en buurten, 2016-2022 , openbare dat bronnen van het CBS, gefilterd op gemeente Hengelo
 Wijk- en buurtkaart 2023 van het CBS, de file bevat geometrien die ndoig zijn voor de kaart weergave
 
 ## ⚙️ Technologieën
 - GIS
 - QGIS
 - SQL
-- Meta base
+- Metabase
 - React
 - Leaflet
   
 ## 📋 Stappenplan
 1. CBS Data verzamelen
     - Zonnepanelen per buurt per jaar (2016–2022).
-    - Geometrieën van wijken en buurten 2025.
+    - Geometrieën van wijken en buurten 2023.
 2. Data voorbereiden
     - Filter zonnepanelen datasheets op Hasseler Es.
     - CSV’s per jaar maken of in één bestand houden met een jaar-kolom.
@@ -53,7 +53,7 @@ flowchart TD
 
     %% Verbetering naar meerdere jaren
     I --> K[Uitbreiden naar Tijdserie<br>of Animatie per Jaar]
-    K --> L[Meerdere Kaarten of Atlas<br>per Jaar automatisch genereren]
+    K --> L[Meerdere Kaarten <br>per Jaar]
   
 
     style A fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
