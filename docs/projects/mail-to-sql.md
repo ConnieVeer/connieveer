@@ -48,9 +48,7 @@ flowchart TD
 Inbox-structuur in CSV is niet echt consistent → flexibel parsen nodig
 Inconsistentie in gebruikersinvoer vroeg om robuuste validatie
 Hoom-database structuur vereist veldmapping en normalisatie
-<!-- ##📌 Status
-✅ Proof-of-concept geïmplementeerd en gebruikt voor meer dan 100 aanvragen
-🛠️ Klaar om uit te breiden naar webhook- of formulierautomatisering -->
+
 <script type="module">
 	import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 	mermaid.initialize({
