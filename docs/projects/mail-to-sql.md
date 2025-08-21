@@ -41,7 +41,7 @@ flowchart TD
 | Naam    | Adres |  Postcode  | Plaats | Emailadres | Datum ontvangen| Bericht|
 | -------- | ------- |-------- | ------- |-------- | ------- |-------- |
 | Jan Jansen  | Leliestraat 12  | 7551ST | Hengelo| jan@email.nl| 2023-10-11| IK wil graag een energiecoach|
-| A. de Vries | Deurningerstraat 4    | 7555PF | Hengelo| aisha@outlook.com| 20123-10-11| informatie over zonnepanelen|
+| A. de Vries | Deurningerstraat 4    | 7555PF | Hengelo| aisha@outlook.com| 2023-10-11| informatie over zonnepanelen|
 
 
 ## 🚩 Lessons Learned
