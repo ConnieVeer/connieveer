@@ -52,7 +52,10 @@ symfony server:start
 
 ## Screenshots
 
-*(add real screenshots here once the app is running, or use the mockups generated for this README)*
+![Screenshots](../assets/images/voorraadbeheer1.png)
+![Screenshots](../assets/images/voorraadbeheer2.png)
+
+![Screenshots](../assets/images/voorraadbeheer3.png)
 
 - Stock overview — articles, their location and quantity
 - Location tree — nested warehouse/rack/shelf/bin structure
